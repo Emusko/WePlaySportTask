@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/people_list_fragment">
+
+    <fragment
+        android:name="com.example.task.presentation.list.PeopleListFragment"
+        android:id="@+id/people_list_fragment"
+        android:label="PeopleListFragment"/>
+
+    <fragment
+        android:name="com.example.task.presentation.detail.PersonDetailFragment"
+        android:id="@+id/person_detail_fragment"
+        android:label="PersonDetailFragment">
+        <argument
+            android:name="person"
+            app:argType="com.example.task.data.service.model.Person"/>
+    </fragment>
+
+</navigation>
